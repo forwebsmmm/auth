@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.telegram',
+    'allauth.socialaccount.providers.vk',
     'crispy_forms',
     'debug_toolbar',
 
@@ -164,6 +166,9 @@ SOCIALACCOUNT_PROVIDERS = {
         'SCOPE': ['email'],
         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
         'VERIFIED_EMAIL': False,
+    },
+    'telegram': {
+        'TOKEN': 'insert-token-received-from-botfather'
     }
 }
 
